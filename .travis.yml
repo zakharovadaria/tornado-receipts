@@ -1,7 +1,11 @@
 language: python
 install:
-  - pip install -r requirements.txt
+- pip install -r requirements.txt
 script:
-  - python -m pytest --cov=src/ tests/
+- python -m pytest --cov=src/ tests/
 after_success:
-  - coveralls
+- coveralls
+deploy:
+  provider: heroku
+  api_key:
+    secure: YhB9CFRvGFvnAULRVCZdF0MLM9I9FYT9X1RMCdiMncHFEXgql6nY/v1dOPOSvw/elNExQBj9R4idKVnpeIDpfwMefNNkE0NbshReLD6kBEEE3awR74HO3DQp89Gne2PIi2T9O3ZiS5y82DyCWB1Q9CWpBPFSNbXa20GTIUkXVZ+dnpW/5nq/30tugzvzKnVDT38e+HSEVvsABXeh8iGelv2yVmi1RxCYF9loHEVTSTpbgETnt2dbDQL8U9wtePAUQ9nSPepQE4TWz/TXxTLBn8s8qfZzRWiP0g8bFB+ck+onS0J/VoF2hMhE1f77k6B+VybhWmxZ0VrKLZfGTNwoHhJbRS75AE5qFg5jf4CN+iPjXVWcGUIzXErNc4QUINodh8RHk9zhGJonbkxIBHYOHgaL/MsT7W7kU70dVgqBKqp+Mn6SRpZihE45Wr6LacqOi7owV+/CnWn3zD9+Y6EDJi4JibteoQ7ZZrn8io9TiJXyWFfA8hCOZusv3zVIJHCd6v7w/tKYEOFOxFBAeDO73GkMMGLxRrvXm9KbDrtu6r6PjnU3NE+1vmsgJBYLECzZSeYu4ZBBegQVJslLIlcXaQxyWWeafosQlKbY7kb1VobwQVf9pMkmUcHZSpU4CXTNnaohb7DRtmXwfOJHzEKHkxBNJeYjJ3kZxen8RuCps7k=
