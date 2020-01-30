@@ -1,3 +1,7 @@
+import dotenv
+
+dotenv.load_dotenv()
+
 import os
 
 from tornado.ioloop import IOLoop

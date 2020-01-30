@@ -20,3 +20,9 @@ class Ingredient(db.instance.Model):
 
     def __eq__(self, other):
         return self.id == other.id
+
+
+class BasicResponse:
+    def __init__(self, result=None, error=None):
+        self.result = result
+        self.error = error
